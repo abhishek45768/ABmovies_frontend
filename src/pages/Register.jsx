@@ -12,7 +12,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/auth/signup', { username, email, password });
+      await axios.post('https://abmovies-backend.onrender.com/auth/signup', { username, email, password });
       navigate('/login');
     } catch (error) {
       setError('Registration failed. Please check your details and try again.');

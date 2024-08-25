@@ -22,7 +22,7 @@ const Login = ({ setIsLoggedIn }) => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', { email, password });
+      const response = await axios.post('https://abmovies-backend.onrender.com/auth/login', { email, password });
       const { token, user } = response.data;
 
       localStorage.setItem('authToken', token);

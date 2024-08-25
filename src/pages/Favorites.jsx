@@ -47,7 +47,7 @@ const Favorites = () => {
       const token = localStorage.getItem('token');
       console.log('Token:', token); // Log token to verify
 
-      const response = await axios.post('http://localhost:5000/favorites/remove', { movieId }, {
+      const response = await axios.post('https://abmovies-backend.onrender.com/favorites/remove', { movieId }, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const Favorites = () => {
       const token = localStorage.getItem('token');
       console.log('Token:', token); // Log token to verify
 
-      const response = await axios.post('http://localhost:5000/favorites/add', { movieId }, {
+      const response = await axios.post('https://abmovies-backend.onrender.com/favorites/add', { movieId }, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`
